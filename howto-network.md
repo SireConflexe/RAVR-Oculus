@@ -2,8 +2,8 @@
 
 1. Ajouter à notre scène un Gameobject et l'appeler **NetworkManager**
 2. Ajouter un component *NetworkManager*
-3. Pour chaque prefab, ajouter le component *NetWorkIdentity*
-4. Mettre dans les objets spawnable du **NetworkManager** le prefab player, ainsi que les objets qui doivent arriver lors du spawn du joueur
+3. Pour chaque prefab qui doit être synchronisé, ajouter le component *NetWorkIdentity* et *NetworkTransform*
+4. Mettre dans les objets spawnable dans le **NetworkManager**, ainsi que les objets qui doivent arriver lors du spawn du joueur
 5. Exemple de script de control du prefab player :
 ```c#
 using System.Collections;
@@ -43,4 +43,4 @@ public class MovePlayer : NetworkBehaviour
     }
 }
 ```
-6. Mettre dans le **NetworkManager** un HUD pour gerer la connexion tant que notre interface de connexion n'est pas définie 
+6. Mettre dans le **NetworkManager** le component *NetworkHUD* pour gerer la connexion tant que notre interface de connexion n'est pas définie 
