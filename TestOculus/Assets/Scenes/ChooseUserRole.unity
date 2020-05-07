@@ -1541,7 +1541,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "P\xEAcheur\n0/1"
+  m_Text: "P\xEAcheur"
 --- !u!222 &517056278
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1923,9 +1923,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6deb5408f4093f4b9d114fb62b69e2a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DieuLabel: {fileID: 2079217501}
-  PecheurLabel: {fileID: 517056277}
   ValidBtn: {fileID: 736940763}
+  PecheurLabel: {fileID: 517056277}
+  DieuLabel: {fileID: 2079217501}
 --- !u!1 &551407408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2535,7 +2535,7 @@ MonoBehaviour:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.16246238, g: 0.9056604, b: 0, a: 1}
     m_PressedColor: {r: 0.45211798, g: 0.9339623, b: 0, a: 1}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -7622,9 +7622,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Dieu
-
-    0/1'
+  m_Text: Dieu
 --- !u!222 &2079217502
 CanvasRenderer:
   m_ObjectHideFlags: 0
