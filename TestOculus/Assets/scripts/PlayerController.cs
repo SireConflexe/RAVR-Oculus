@@ -1,9 +1,10 @@
 ﻿using UnityEngine.SceneManagement;
 using UnityEngine;
+using UnityEngine.Networking;
 
-public class PlayerController : MonoBehaviour
+public class PlayerController : NetworkBehaviour
 {
-    public int speed = 0;
+    private int speed = 3;
 
     public AudioClip walkSound;
     public AudioClip colisionhSound;
@@ -29,7 +30,11 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 
-        updateWalkSoundsStatus();
+        if(!isLocalPlayer){
+            return ;
+        }
+
+         updateWalkSoundsStatus();
 
         // get input data from keyboard or controller
         float moveHorizontal = Input.GetAxis("Horizontal");
