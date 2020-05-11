@@ -54,13 +54,13 @@ public class UI_Menu_chooseRole : MonoBehaviour
     private void updateLabels()
     {
         if (this.isDieu) {
-            this.DieuLabel.color = new Color(255, 0, 0);
+            this.DieuLabel.color = new Color(0, 155.0f / 255.0f, 255.0f / 255.0f);
         } else {
             this.DieuLabel.color = new Color(0, 0, 0);
         }
 
         if(this.isPecheur) {
-            this.PecheurLabel.color = new Color(255, 0, 0);
+            this.PecheurLabel.color = new Color(0, 155.0f/255.0f, 255.0f/255.0f);
         } else {
             this.PecheurLabel.color = new Color(0, 0, 0);
         }

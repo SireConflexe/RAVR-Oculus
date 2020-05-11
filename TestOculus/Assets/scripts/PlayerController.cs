@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using UnityEngine.SceneManagement;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
@@ -41,6 +40,7 @@ public class PlayerController : MonoBehaviour
         position.x += moveHorizontal * speed * Time.deltaTime;
         position.z += moveVertical * speed * Time.deltaTime;
         transform.position = position;
+
     }
 
     void updateWalkSoundsStatus() { 
