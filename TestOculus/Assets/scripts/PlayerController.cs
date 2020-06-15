@@ -4,6 +4,10 @@ using UnityEngine.Networking;
 
 public class PlayerController : NetworkBehaviour
 {
+
+    private Vector3 correctionPosition = new Vector3(0,2,0);
+    private Vector3 correctionRotation = new Vector3(-15,0,0);
+
     private int speed = 3;
 
     public AudioClip walkSound;
@@ -12,10 +16,27 @@ public class PlayerController : NetworkBehaviour
     private AudioSource audioData;
     private bool play_walk_sound;
 
+
+    void UpdatePositionViaVR(){
+        Vector3 playeVRPosition  =  Camera.main.transform.position;
+        transform.position = playeVRPosition - correctionPosition;
+    }
+
+    void UpdateRotationViaVR(){
+        transform.rotation = Camera.main.transform.rotation;
+        transform.Rotate(correctionRotation);
+    }
+
+    void DisableRenderer(){
+         foreach (Renderer r in GetComponentsInChildren<Renderer>())
+            r.enabled = false;
+    }
+
     // Use this for initialization
     void Start()
     {
 
+        UpdatePositionViaVR();
         audioData = GetComponent<AudioSource>();
 
         play_walk_sound = false;
@@ -23,6 +44,8 @@ public class PlayerController : NetworkBehaviour
         audioData.volume = 100;
         audioData.loop = true;
         audioData.clip = walkSound;
+
+        if(isLocalPlayer){DisableRenderer();}
 
     }
 
@@ -40,12 +63,8 @@ public class PlayerController : NetworkBehaviour
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        // update player position based on input
-        Vector3 position = transform.position;
-        position.x += moveHorizontal * speed * Time.deltaTime;
-        position.z += moveVertical * speed * Time.deltaTime;
-        transform.position = position;
-
+        UpdatePositionViaVR();
+        UpdateRotationViaVR();
     }
 
     void updateWalkSoundsStatus() { 
