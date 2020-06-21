@@ -31,7 +31,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2724930132985702922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.696433, y: 3.2988887, z: -3.106487}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6086747365503763846}
@@ -142,7 +142,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8000151ab1c93704793cfe9a96af741a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playeVRPosition: {x: 0, y: 0, z: 0}
   walkSound: {fileID: 0}
   colisionhSound: {fileID: 0}
 --- !u!82 &82925943669549714
