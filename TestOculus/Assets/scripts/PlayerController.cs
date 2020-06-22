@@ -1,14 +1,10 @@
-﻿using UnityEngine.SceneManagement;
+﻿using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Networking;
 
-public class PlayerController : NetworkBehaviour
+public class PlayerController : MonoBehaviour
 {
-
-    private Vector3 correctionPosition = new Vector3(0,2,0);
-    private Vector3 correctionRotation = new Vector3(-15,0,0);
-
-    private int speed = 3;
+    public int speed = 0;
 
     public AudioClip walkSound;
     public AudioClip colisionhSound;
@@ -16,27 +12,10 @@ public class PlayerController : NetworkBehaviour
     private AudioSource audioData;
     private bool play_walk_sound;
 
-
-    void UpdatePositionViaVR(){
-        Vector3 playeVRPosition  =  Camera.main.transform.position;
-        transform.position = playeVRPosition - correctionPosition;
-    }
-
-    void UpdateRotationViaVR(){
-        transform.rotation = Camera.main.transform.rotation;
-        transform.Rotate(correctionRotation);
-    }
-
-    void DisableRenderer(){
-         foreach (Renderer r in GetComponentsInChildren<Renderer>())
-            r.enabled = false;
-    }
-
     // Use this for initialization
     void Start()
     {
 
-        UpdatePositionViaVR();
         audioData = GetComponent<AudioSource>();
 
         play_walk_sound = false;
@@ -45,26 +24,23 @@ public class PlayerController : NetworkBehaviour
         audioData.loop = true;
         audioData.clip = walkSound;
 
-        if(isLocalPlayer){DisableRenderer();}
-
     }
 
     // Update is called once per frame
     void Update()
     {
 
-        if(!isLocalPlayer){
-            return ;
-        }
-
-         updateWalkSoundsStatus();
+        updateWalkSoundsStatus();
 
         // get input data from keyboard or controller
         float moveHorizontal = Input.GetAxis("Horizontal");
         float moveVertical = Input.GetAxis("Vertical");
 
-        UpdatePositionViaVR();
-        UpdateRotationViaVR();
+        // update player position based on input
+        Vector3 position = transform.position;
+        position.x += moveHorizontal * speed * Time.deltaTime;
+        position.z += moveVertical * speed * Time.deltaTime;
+        transform.position = position;
     }
 
     void updateWalkSoundsStatus() { 

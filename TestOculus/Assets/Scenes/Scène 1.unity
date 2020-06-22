@@ -1214,7 +1214,7 @@ GameObject:
   - component: {fileID: 1062967092}
   - component: {fileID: 1062967096}
   m_Layer: 0
-  m_Name: Teleporteur
+  m_Name: TeleporteurAleatoire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1302,12 +1302,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1062967091}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852dc4b6571dfe8428890f832dc3310f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5badf360ac51c4d4d807c8fb1db92955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 40
+  x: 39.5
   y: 0
-  z: 40
+  z: 39.5
 --- !u!1 &1089306535
 GameObject:
   m_ObjectHideFlags: 0
@@ -1322,7 +1322,7 @@ GameObject:
   - component: {fileID: 1089306538}
   - component: {fileID: 1089306537}
   m_Layer: 0
-  m_Name: Teleporteur
+  m_Name: TeleporteurRelatif
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1351,12 +1351,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1089306535}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852dc4b6571dfe8428890f832dc3310f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5badf360ac51c4d4d807c8fb1db92955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 40
+  x: 39.5
   y: 0
-  z: 40
+  z: 39.5
 --- !u!64 &1089306538
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1462,7 +1462,7 @@ GameObject:
   - component: {fileID: 1181472764}
   - component: {fileID: 1181472763}
   m_Layer: 0
-  m_Name: Teleporteur
+  m_Name: TeleporteurFixe
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1491,12 +1491,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1181472761}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852dc4b6571dfe8428890f832dc3310f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5badf360ac51c4d4d807c8fb1db92955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 40
+  x: 39.5
   y: 0
-  z: 40
+  z: 39.5
 --- !u!64 &1181472764
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -1846,7 +1846,7 @@ GameObject:
   - component: {fileID: 1812360569}
   - component: {fileID: 1812360568}
   m_Layer: 0
-  m_Name: Teleporteur
+  m_Name: TeleporteurAleatoire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1875,12 +1875,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1812360566}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 852dc4b6571dfe8428890f832dc3310f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5badf360ac51c4d4d807c8fb1db92955, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  x: 40
+  x: 39.5
   y: 0
-  z: 40
+  z: 39.5
 --- !u!64 &1812360569
 MeshCollider:
   m_ObjectHideFlags: 0
